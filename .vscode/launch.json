@@ -1,0 +1,175 @@
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch QuickSort",
+            "request": "launch",
+            "mainClass": "QuickSort",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch shellSort",
+            "request": "launch",
+            "mainClass": "shellSort",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch insertSort",
+            "request": "launch",
+            "mainClass": "insertSort",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch selectsort",
+            "request": "launch",
+            "mainClass": "selectsort",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch bubblesort",
+            "request": "launch",
+            "mainClass": "bubblesort",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch queen8",
+            "request": "launch",
+            "mainClass": "queen8",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bouncer",
+            "request": "launch",
+            "mainClass": "Bouncer",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch Counter",
+            "request": "launch",
+            "mainClass": "Counter",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch Euclid",
+            "request": "launch",
+            "mainClass": "Euclid",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileRead",
+            "request": "launch",
+            "mainClass": "FileRead",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileWrite",
+            "request": "launch",
+            "mainClass": "FileWrite",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch GuGu",
+            "request": "launch",
+            "mainClass": "GuGu",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch HouseDog",
+            "request": "launch",
+            "mainClass": "HouseDog",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch HousePark",
+            "request": "launch",
+            "mainClass": "HousePark",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch Recur",
+            "request": "launch",
+            "mainClass": "Recur",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch SingletonTest",
+            "request": "launch",
+            "mainClass": "SingletonTest",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch factorial",
+            "request": "launch",
+            "mainClass": "factorial",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch hanoi",
+            "request": "launch",
+            "mainClass": "hanoi",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch hello",
+            "request": "launch",
+            "mainClass": "hello",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch streamTest",
+            "request": "launch",
+            "mainClass": "streamTest",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch testThread",
+            "request": "launch",
+            "mainClass": "testThread",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch testTry",
+            "request": "launch",
+            "mainClass": "testTry",
+            "projectName": "workplace_dab660de"
+        },
+        {
+            "type": "java",
+            "name": "Launch zooKeeper",
+            "request": "launch",
+            "mainClass": "zooKeeper",
+            "projectName": "workplace_dab660de"
+        }
+    ]
+}
