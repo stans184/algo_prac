@@ -1,3 +1,3 @@
 # algo_prac
 
-I want to arrange algorithm knowledge for coding test
+I'm going to organize the knowledge for testing algorithms.
