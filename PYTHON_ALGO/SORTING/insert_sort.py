@@ -1,5 +1,6 @@
 # insert sort
 # 평균 정렬 시간이 O(n^2)
+# 현재 선택된 element 보다 앞부분을 쭉 검사하면서 큰 값이 나올때마다 자리를 바꾼다
 
 def insertSort1(arr):
 
