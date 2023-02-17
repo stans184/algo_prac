@@ -32,3 +32,4 @@ def binary_search(num, targetList):
 
 binary_search(83, numList)
 binary_search(88, numList)
+binary_search(12, numList)
