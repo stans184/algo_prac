@@ -3,7 +3,6 @@
 # 현재 선택된 element 보다 앞부분을 쭉 검사하면서 큰 값이 나올때마다 자리를 바꾼다
 
 def insertSort1(arr):
-
     for i in range(len(arr)):
         j = i
         while j > 0 and arr[j-1] > arr[j]:
@@ -12,14 +11,14 @@ def insertSort1(arr):
 
     return arr
 
-def insertSort2(data):
-    for i in range(len(data)):
+def insertSort2(arr):
+    for i in range(len(arr)):
         for j in range(i, 0, -1):
-            if data[j-1] > data[j]:
-               data[j-1], data[j] = data[j], data[j-1] # Swap.
-    return data
+            if arr[j-1] > arr[j]:
+               arr[j-1], arr[j] = arr[j], arr[j-1] # Swap.
+    return arr
 
-arr = [80, 50, 70, 10, 60, 20, 40, 30]
+data = [80, 50, 70, 10, 60, 20, 40, 30]
 
-print(insertSort1(arr))
-print(insertSort2(arr))
+print(insertSort1(data))
+print(insertSort2(data))

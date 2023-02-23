@@ -10,6 +10,7 @@ def countingSort(arr):
     # 숫자가 등장할때마다 세주기
     for i in range(len(arr)):
         count[arr[i]] += 1
+    print(count)
     # 저장해서 출력할 리스트
     result = []
     
@@ -19,9 +20,12 @@ def countingSort(arr):
         # 그래서 앞에서부터 순서대로 result 에 담기게 되는 것
         for j in range(count[i]):
             result.append(i)
+        # if count[i] != 0:
+        #     for j in range(count[i]):
+        #         result.append(i)
     return result
 
-data = [10, 55, 23, 2, 79, 101, 16, 82, 30, 45]
-
+# data = [10, 55, 23, 2, 79, 101, 16, 82, 30, 45]
+data = [6,10,21,12,6,17]
 
 print(countingSort(data))
