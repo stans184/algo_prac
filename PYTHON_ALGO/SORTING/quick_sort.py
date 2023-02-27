@@ -42,5 +42,6 @@ def quickSort(arr, left, right):
 
 
 data = [10, 55, 23, 2, 79, 101, 16, 82, 30, 45]
-
+arr = [6, 3, 2, 10, 10, 10,-10,-10, 7, 3]
 print(quickSort(data, 0, len(data)-1))
+print(quickSort(arr, 0, len(arr)-1))
