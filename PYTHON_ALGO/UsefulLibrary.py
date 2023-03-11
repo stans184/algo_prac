@@ -46,8 +46,9 @@ def heapSort(arr):
     return result5
 
 randomList = [845,132,246,231,584,291,313]
-print(heapSort(randomList))
-result5 = [132, 231, 246, 291, 313, 584, 845]
+result5 = heapSort(randomList)
+print(result5)
+# [132, 231, 246, 291, 313, 584, 845]
 
 # 4. bisect
 #   > binarySearch 를 쉽게 할수 있는 라이브러리, 정렬된 배열에서 사용할 떄 효과적
