@@ -69,6 +69,10 @@ print(data2.pop())          # 가장 끝에 들어간 element 제거
 print(data2)                # deque([132, 231, 246, 291, 313, 584])
 print(data2.popleft())      # 가장 처음 들어간 element 제거
 print(data2)                # deque([231, 246, 291, 313, 584])
+data2.rotate(2)             # queue 에 들어있는 데이터를 정수만큼 오른쪽으로 회전,
+print(data2)                # 맨오른쪽에서 빼서 왼쪽으로 추가 * 2번 deque([313, 584, 231, 246, 291])
+data2.rotate(-3)  #(부호반전) # queue 에 들어있는 데이터를 정수만큼 왼쪽으로 회전
+print(data2)          # 맨 왼쪽에서 빼서 오른쪽으로 추가 * 3번 deque([246, 291, 313, 584, 231])
 #
 #   > Counter
 #   > 반복되는 객체가 주어졌을 때, 몇번씩 등장하는지 count
