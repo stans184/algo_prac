@@ -1,46 +1,68 @@
-# 7 3
-# <3, 6, 2, 7, 5, 1, 4>
-# 1234567
-# 3 456712
-# 6 71245
-# 2 4571
-# 7 145
-# 5 14
-# 1
-# 4
+# push_front X: 정수 X를 덱의 앞에 넣는다.
+# push_back X: 정수 X를 덱의 뒤에 넣는다.
+# pop_front: 덱의 가장 앞에 있는 수를 빼고, 그 수를 출력한다. 만약, 덱에 들어있는 정수가 없는 경우에는 -1을 출력한다.
+# pop_back: 덱의 가장 뒤에 있는 수를 빼고, 그 수를 출력한다. 만약, 덱에 들어있는 정수가 없는 경우에는 -1을 출력한다.
+# size: 덱에 들어있는 정수의 개수를 출력한다.
+# empty: 덱이 비어있으면 1을, 아니면 0을 출력한다.
+# front: 덱의 가장 앞에 있는 정수를 출력한다. 만약 덱에 들어있는 정수가 없는 경우에는 -1을 출력한다.
+# back: 덱의 가장 뒤에 있는 정수를 출력한다. 만약 덱에 들어있는 정수가 없는 경우에는 -1을 출력한다.
 
-
-# from collections import deque
-# import sys
-# input = sys.stdin.readline
-
-# n, k = map(int, input().split())
-# # n, k = 4,5
-
-# q = deque([i for i in range(1, n+1)])
-# remove_cnt = ''
-# while q:
-#     if len(q) >= k:
-#         for _ in range(k):
-#             q.append(q.popleft())
-#         remove_cnt += str(q.popleft()) + ", "
-#     else:
-#         remove_cnt += str(q.popleft()) + ", "
-
-# print("<" + remove_cnt[:-2] + ">")
-
-from collections import deque
 import sys
-
 input = sys.stdin.readline
 
-n, k = map(int, input().split())
+def push_front(arr, x):
+    return [x] + arr
 
-q = deque([i for i in range(1, n+1)])
-remove_cnt = []
+def push_back(arr, x):
+    return arr + [x]
 
-while q:
-    q.rotate(-(k-1))
-    remove_cnt.append(str(q.popleft()))
+def pop_front(arr):
+    if arr:
+        print(arr[0])
+        return arr[1:]
+    else: 
+        print(-1)
+        return arr
 
-print("<" + ", ".join(remove_cnt) + ">")
+def pop_back(arr):
+    if arr:
+        print(arr[-1])
+        return arr[:len(arr)-1]
+    else: 
+        print(-1)
+        return arr
+
+def size(arr):
+    print(len(arr))
+
+def empty(arr):
+    print(0 if arr else 1)
+
+def front(arr):
+    if arr: print(arr[0])
+    else: print(-1)
+
+def back(arr):
+    if arr: print(arr[-1])
+    else: print(-1)
+
+data = []
+
+for _ in range(int(input())):
+    order = list(map(str, input().split()))
+    if order[0] == 'push_front':
+        data = push_front(data, int(order[1]))
+    elif order[0] == 'push_back':
+        data = push_back(data, int(order[1]))
+    elif order[0] == 'pop_front':
+        data = pop_front(data)
+    elif order[0] == 'pop_back':
+        data = pop_back(data)
+    elif order[0] == 'size':
+        size(data)
+    elif order[0] == 'empty':
+        empty(data)
+    elif order[0] == 'front':
+        front(data)
+    elif order[0] == 'back':
+        back(data)
