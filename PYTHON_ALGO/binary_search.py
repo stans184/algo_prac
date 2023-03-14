@@ -33,3 +33,36 @@ def binary_search(num, targetList):
 binary_search(83, numList)
 binary_search(88, numList)
 binary_search(12, numList)
+
+## 예시 1
+## k 개만큼 주어진 cable들을 동일한 길이만큼 잘라서 n 개로 나누고 싶을 때
+import sys
+input = sys.stdin.readline
+
+k, n = map(int, input().split())
+cables = [int(input()) for _ in range(k)]
+
+min, max = 1, max(cables)
+while min<=max:
+    mid = (min + max)//2
+    lan = [cable//mid for cable in cables]
+    if sum(lan) >= n: min = mid+1
+    else: max = mid-1
+print(max)
+
+## 예시 2
+## 주어진 나무들을 동일한 길이만큼 잘라서 그 값들을 더하면 m 이 되도록
+import sys
+input = sys.stdin.readline
+
+n,m = map(int, input().split())
+trees = list(map(int, input().split()))
+
+min, max = 1, max(trees)
+
+while min<=max:
+    mid = (min+max)//2
+    cut = [tree-mid for tree in trees if tree > mid]
+    if sum(cut) >= m: min = mid+1
+    else: max = mid-1
+print(max)
