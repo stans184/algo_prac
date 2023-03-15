@@ -1,18 +1,29 @@
-from collections import deque
-import heapq
-# 위에 두개 비교해보기
-
 import sys
+from collections import deque
 input = sys.stdin.readline
 
-def fibo(n):
-    if n <= 2:
-        return 1
-    else:
-        a, b = 1, 1
-        for i in range(n-2):
-            a, b = b, a+b
-        return b
+for _ in range(int(input())):
+    order = input().rstrip()
+    n = int(input())
+    numbers = deque(input().rstrip()[1:-1].split(','))
 
-number = int(input())
-print(fibo(number), number-2)
+    isReverse, isNormal = False, True
+
+    if n == 0: numbers = deque([])
+
+    for o in order:
+        if o == 'R': isReverse = not isReverse
+        elif o == 'D':
+            if not numbers:
+                isNormal = not isNormal
+                print('error')
+                break
+            else:
+                if isReverse: numbers.pop()
+                else: numbers.popleft()
+    if isNormal:
+        if isReverse:
+            numbers.reverse()
+            print('[' + ','.join(numbers) + ']')
+        else:
+            print('[' + ','.join(numbers) + ']')
