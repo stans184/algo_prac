@@ -1,29 +1,26 @@
-import sys
-from collections import deque
+# 13
+# 0
+# 1
+# 2
+# 0
+# 0
+# 3
+# 2
+# 1
+# 0
+# 0
+# 0
+# 0
+# 0
+
+import sys,heapq
 input = sys.stdin.readline
 
+h = []
 for _ in range(int(input())):
-    order = input().rstrip()
-    n = int(input())
-    numbers = deque(input().rstrip()[1:-1].split(','))
-
-    isReverse, isNormal = False, True
-
-    if n == 0: numbers = deque([])
-
-    for o in order:
-        if o == 'R': isReverse = not isReverse
-        elif o == 'D':
-            if not numbers:
-                isNormal = not isNormal
-                print('error')
-                break
-            else:
-                if isReverse: numbers.pop()
-                else: numbers.popleft()
-    if isNormal:
-        if isReverse:
-            numbers.reverse()
-            print('[' + ','.join(numbers) + ']')
-        else:
-            print('[' + ','.join(numbers) + ']')
+    x = int(input())
+    if x == 0:
+        if not h: print(0)
+        else: print(heapq.heappop(h)[1])
+    else:
+        heapq.heappush(h, (abs(x), x))
