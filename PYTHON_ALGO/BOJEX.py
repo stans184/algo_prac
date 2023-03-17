@@ -1,26 +1,24 @@
-# 13
-# 0
-# 1
-# 2
-# 0
-# 0
-# 3
-# 2
-# 1
-# 0
-# 0
-# 0
-# 0
-# 0
+# x_list = []
+# y_list = []
 
-import sys,heapq
-input = sys.stdin.readline
+# for _ in range(3):
+#     x, y = map(int, input().split())
+#     x_list.append(x)
+#     y_list.append(y)
 
-h = []
-for _ in range(int(input())):
-    x = int(input())
-    if x == 0:
-        if not h: print(0)
-        else: print(heapq.heappop(h)[1])
-    else:
-        heapq.heappush(h, (abs(x), x))
+# for i in range(3):
+#     if x_list.count(x_list[i]) == 1:
+#         x = x_list[i]
+#     if y_list.count(y_list[i]) == 1:
+#         y = y_list[i]
+
+# print(x, y)
+
+nums = [00, 1]
+
+n = 6
+cnt = 0
+target = n//2
+
+for i in range(1, target+1):
+    divide = 2*i

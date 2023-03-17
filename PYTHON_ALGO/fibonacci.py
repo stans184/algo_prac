@@ -36,3 +36,11 @@ end2 = time.time()
 
 print('반복문으로',result2)
 print('소요시간', end2-start2)
+
+# dynamic programming
+
+def fibonacci(n):
+    dp = [0, 1]
+    for i in range(2, n+1):
+        dp.append(dp[i-1] + dp[i-2])
+    return dp[n]
