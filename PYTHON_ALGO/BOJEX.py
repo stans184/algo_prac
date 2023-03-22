@@ -1,24 +1,21 @@
-# x_list = []
-# y_list = []
+# ax + by = c
+# dx + ey = f
 
-# for _ in range(3):
-#     x, y = map(int, input().split())
-#     x_list.append(x)
-#     y_list.append(y)
+# 1 3 -1 4 1 7
+# 2 -1
 
-# for i in range(3):
-#     if x_list.count(x_list[i]) == 1:
-#         x = x_list[i]
-#     if y_list.count(y_list[i]) == 1:
-#         y = y_list[i]
+# 2 5 8 3 -4 -11
+# -1 2
 
-# print(x, y)
+# x = (c - by)/a
 
-nums = [00, 1]
+# d*c/a + (e - d*b/a)*y = f
+# (f - d*c/a)/(e-d*b/a) = y
+import sys
+input = sys.stdin.readline
 
-n = 6
-cnt = 0
-target = n//2
+a,b,c,d,e,f = map(int, input().split())
 
-for i in range(1, target+1):
-    divide = 2*i
+y = int((f - d*c/a)/(e-d*b/a))
+x = int((c-b*y)/a)
+print(x, y)
