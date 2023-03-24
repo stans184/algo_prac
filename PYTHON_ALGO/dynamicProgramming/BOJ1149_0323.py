@@ -14,8 +14,20 @@
 # 13 89 99  >   3번집을 빨강, 초록, 파랑으로 칠하는 비용
 # 96
 
-# 첫번째 집 경우의 수 3개
-# 두번째 집 경우의 수 첫번째 집을 뺀 2개
-# 세번째 집 경우의 수 두번째와 겹치지 않아야 하므로 2개
-# 4번째 집은 두번째, 세번째와 겹치면 안되므로 1개
-# 4번째 집 이후로 계속 동일하게 1개씩만 남음
+n = int(input())
+cost = []
+
+for _ in range(n):
+    cost.append(list(map(int, input().split())))
+
+total_cost = [[0]*3 for _ in range(3)]
+total_cost[0] = cost[0]
+
+# 현재 집을 기준으로 반복문을 설정해야 함
+for i in range(1, n):
+    total_cost[i][0] = (cost[i][0] + min(total_cost[i-1][1], total_cost[i-1][2])) # red
+    total_cost[i][1] = (cost[i][1] + min(total_cost[i-1][0], total_cost[i-1][2])) # green
+    total_cost[i][2] = (cost[i][2] + min(total_cost[i-1][0], total_cost[i-1][1])) # blue
+
+print(total_cost)
+print(min(total_cost[n-1]))
