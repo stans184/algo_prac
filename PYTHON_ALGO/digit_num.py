@@ -11,6 +11,7 @@ print(a.isdecimal())
 # ord(문자)             'A' = 아스키코드 65, 'a' = 아스키코드 97
 print(ord('a'))
 print(ord('A'))
+print(chr(ord('A') + 32))
 # chr(정수)
 print(chr(98))
 
