@@ -26,3 +26,12 @@ graph['J'] = ['I']
 
 print(dfs_recursive(graph, 'A'))
 # ['A', 'B', 'D', 'E', 'F', 'C', 'G', 'H', 'I', 'J']
+
+test = dict()
+test[1] = [2, 4]
+test[2] = [3, 4]
+test[3] = [4]
+test[4] = []
+test[5] = []
+
+print(dfs_recursive(test, 1))
