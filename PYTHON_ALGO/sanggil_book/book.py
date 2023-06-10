@@ -30,3 +30,10 @@ for i in range(10, 12):
 b = collections.Counter(a)
 print(b)  # Counter({1: 2, 2: 1, 3: 1, 34: 1, 45: 1, 56: 1, 7: 1})
 print(b.most_common(2))
+
+# =========================================
+# python의 sort() 함수와 sorted() 함수는 timsort 정렬을 사용한다
+# timsort 정렬은 insert sort 와 merge sort 를 섞은 것이다
+# 최고 O(n) 안정 O(nlogn) 최악 O(nlogn) 의 성능을 발휘한다
+# 현업에서도 가장 많이 쓰이는 정렬 알고리즘
+# 파이썬을 통해 문제를 해결할 떄, 엥간하면 이게 제일 빠르다
