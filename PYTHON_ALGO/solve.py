@@ -1,29 +1,42 @@
-# 어쩔수 없이 뛰어난 코딩 실력을 발휘해 리암을 도와주는 프로그램을 작성하려고 하지만, 
-# 디아블로를 하느라 코딩할 시간이 없어서 이 문제를 읽고 있는 여러분이 대신 해주어야 한다.
-# 거스름돈의 액수가 주어지면 리암이 줘야할 쿼터(Quarter, $0.25)의 개수, 다임(Dime, $0.10)의 개수, 니켈(Nickel, $0.05)의 개수,
-# 페니(Penny, $0.01)의 개수를 구하는 프로그램을 작성하시오. 
-# 거스름돈은 항상 $5.00 이하이고, 손님이 받는 동전의 개수를 최소로 하려고 한다. 
-# 예를 들어, $1.24를 거슬러 주어야 한다면, 손님은 4쿼터, 2다임, 0니켈, 4페니를 받게 된다.
+from collections import Counter
 
-# 3
-# 124
-# 25
-# 194
+def solution(participant, completion):
+    dict_h = {}
+    sum_h = 0
+    
+    for person in participant:
+        dict_h[hash(person)] = person
+        sum_h += hash(person)
+    
+    for person in completion:
+        sum_h -= hash(person)
+    
+    return dict_h[sum_h] 
 
-# 4 2 0 4
-# 1 0 0 0
-# 7 1 1 4
+def solution2(participant, completion):
+    hashDict = {}
+    sumHash = 0
+    
+    # 1. Hash : Participant의 dictionary 만들기
+    # 2. Participant의 sum(hash) 구하기
+    for part in participant:
+        hashDict[hash(part)] = part
+        sumHash += hash(part)
+    
+    # 3. completion의 sum(hash) 빼기
+    for comp in completion:
+        sumHash -= hash(comp)
+    
+    # 4. 남은 값이 완주하지 못한 선수의 hash 값이 된다
+    return hashDict[sumHash]
 
-coins = [25, 10, 5, 1]
+p = ["mislav", "stanko", "mislav", "ana"]
+print(Counter(p))
+c = ["stanko", "ana", "mislav"]
 
-for _ in range(int(input())):
-    n = int(input())
-    change = [0, 0, 0, 0]
-    for i in range(len(coins)):
-        if n//coins[i] >= 1:
-            change[i] += n//coins[i]
-            n %= coins[i]
-        
-    for c in change:
-        print(c, end=" ")
-    print()
+print(solution(p, c))
+print(solution2(p, c))
+
+
+answer = Counter(p) - Counter(c)
+print(list(dict(answer).keys())[0])
