@@ -1,3 +1,5 @@
+import math
+
 # 완전탐색 level1 모의고사
 def sol1(answers):
     patterns = [
@@ -53,7 +55,5 @@ def sol3(phone_book):
             print()
     return answer
 
-phone_book = ["12","123","1235","567","88"]
 
 
-print(sol3(phone_book))
