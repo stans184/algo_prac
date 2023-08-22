@@ -1,4 +1,5 @@
 import math
+from itertools import permutations
 
 # 완전탐색 level1 모의고사
 def sol1(answers):
@@ -57,3 +58,29 @@ def sol3(phone_book):
 
 
 
+def sol4(numbers):
+    num = [str(i) for i in numbers]
+    num.sort(reverse=True)
+    print(num)
+    i = 1
+    while i < len(num):
+        if num[i] + num[i-1] > num[i-1] + num[i]:
+            num[i], num[i-1] = num[i-1], num[i]
+            i -= 2
+        i += 1
+        
+    return ''.join(num)
+
+print(type('a' + 'b'))
+
+a = "1234"
+b = [i for i in a]
+c = set(permutations(b))
+d = []
+for nums in c:
+    temp = ''
+    for num in nums:
+        temp += num
+    d.append(int(temp))
+
+print(d)
