@@ -71,16 +71,35 @@ def sol4(numbers):
         
     return ''.join(num)
 
-print(type('a' + 'b'))
+def prime_num(n):
+    if n < 2: return False
+    else:
+        for i in range(2, n):
+            if n % i == 0: return False
+        return True
 
-a = "1234"
-b = [i for i in a]
-c = set(permutations(b))
-d = []
-for nums in c:
-    temp = ''
-    for num in nums:
-        temp += num
-    d.append(int(temp))
+def sol5(numbers):
+    mix = set()
+    check = set()
+    count = 0
+    
+    for i in range(len(numbers)):
+        mix = mix.union(set(permutations(numbers, i+1)))
+    
+    for num in mix:
+        temp = ''
+        for n in num:
+            temp += n
+        check.add(int(temp))
+    
+    print(check)
+    
+    for num in check:
+        if prime_num(num):
+            count += 1
+            
+    return count
+    
+n = "011"
 
-print(d)
+print(sol5(n))
