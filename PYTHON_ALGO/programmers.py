@@ -55,5 +55,8 @@ def sol3(phone_book):
             print()
     return answer
 
+def sol(numbers):
+    numbers.sort(key=lambda x:3*str(x), reverse=True)
+    return ''.join(numbers)
 
-
+print(sol([3, 30, 34, 5, 9]))
