@@ -1,4 +1,5 @@
 import math
+from itertools import permutations
 
 # 완전탐색 level1 모의고사
 def sol1(answers):
@@ -59,4 +60,17 @@ def sol(numbers):
     numbers.sort(key=lambda x:3*str(x), reverse=True)
     return ''.join(numbers)
 
-print(sol([3, 30, 34, 5, 9]))
+
+def sol4(numbers):
+    num = [str(i) for i in numbers]
+    num.sort(reverse=True)
+    print(num)
+    i = 1
+    while i < len(num):
+        if num[i] + num[i-1] > num[i-1] + num[i]:
+            num[i], num[i-1] = num[i-1], num[i]
+            i -= 2
+        i += 1
+        
+    return ''.join(num)
+
