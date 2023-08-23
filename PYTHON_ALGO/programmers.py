@@ -74,3 +74,8 @@ def sol4(numbers):
         
     return ''.join(num)
 
+print(ord('A'))
+print(chr(65))
+print(chr(90))
+
+print([ord(i) for i in "name".upper()])
