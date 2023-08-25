@@ -56,12 +56,12 @@ def sol3(phone_book):
             print()
     return answer
 
-def sol(numbers):
+def sol4(numbers):
     numbers.sort(key=lambda x:3*str(x), reverse=True)
     return ''.join(numbers)
 
 
-def sol4(numbers):
+def sol5(numbers):
     num = [str(i) for i in numbers]
     num.sort(reverse=True)
     print(num)
@@ -74,8 +74,3 @@ def sol4(numbers):
         
     return ''.join(num)
 
-print(ord('A'))
-print(chr(65))
-print(chr(90))
-
-print([ord(i) for i in "name".upper()])
