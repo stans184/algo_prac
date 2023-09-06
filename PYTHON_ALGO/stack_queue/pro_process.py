@@ -1,13 +1,35 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/42587
+from collections import deque
 
-# priorities	location	return
-# [2, 1, 3, 2]	2	1
-# [1, 1, 9, 1, 1, 1]	0	5
+# priorities
+task1 = [2, 1, 3, 2]	
+loc1 = 2
+# ans 1
+task2 = [1, 1, 9, 1, 1, 1]
+loc2 = 0
+# ans 5
 
 def solution(priorities, location):
-    ans = []
-    return ans
+    stack = deque()
+    pro_sort = sorted(priorities, reverse=True)
+    execute = []
 
-# 현재값을 제외한 뒤 값들에서 최대값을 확인하고 
-# 더 큰 값이 있다면 맨 뒤로 옮기기
-# 옮기는건 할 수 있는데, 몇 번째 순서인지는 어떻게 봐야할까
+    for idx, process in enumerate(priorities):
+        stack.append([idx, process])
+
+    # 반복해야함
+    # pro_sort와의 크기 비교하면서
+    # 더 큰놈들이 있으면 뒤로 넘기도록
+
+    while stack:
+        process = stack.popleft()
+        if process[1] == pro_sort[0]:
+            execute.append(process)
+            pro_sort = pro_sort[1:]
+        else:
+            stack.append(process)
+            
+
+    for idx, process in enumerate(execute):
+        if process[0] == location:
+            return idx+1
