@@ -27,7 +27,8 @@ def solution(n, wires):
         L.add(wires[i][0])
         R.add(wires[i][1])
         
-        # heap의 모든 부분을 빼내서 왼쪽과 오른쪽으로 나눠서 넣기
+        # heap의 모든 부분을 빼내서 
+        # 연결점이 있는 왼쪽과 오른쪽으로 나눠서 넣기
         # 왼쪽, 오른쪽에서 연결점을 찾지 못한다면 다시 heap에다가 넣고, 나중에 검증
         while heap:
             a, b = heap.pop(0)
