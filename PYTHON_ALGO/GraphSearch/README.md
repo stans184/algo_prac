@@ -20,4 +20,4 @@
 # 이어져있으면 1, 아니면 0, 가중치가 있으면 그에 해당하는 숫자 등
 # LinkedList 로도 표현 가능
 
-https://velog.io/@kasterra/%ED%95%B5%EC%8B%AC-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EA%B7%B8%EB%9E%98%ED%94%84
+https://kasterra.github.io/graphds1/
