@@ -7,7 +7,14 @@
 # example keyword) 타겟 넘버, 네트워크, 단어변환, 여행경로
 #
 # DFS 는 한곳부터 깊게 들어가는 것이기 때문에 재귀함수로 구현하는 것이 일반적
-# DFS 는 stack 으로도 가능...?
+# DFS 는 stack 으로도 가능
+# - 위상정렬 : 순서가 정해져 있는 작업을 차례대로 수행해야 할 때, 순서를 결정하는 알고리즘
+#   DAC (Directed Acyclic Graph) : 방향 그래프이나, 사이클이 있으면 안됨, 시작점이 무조건 있어야 함
+#   스택, 큐로 풀수 있음? 요거는 좀더 분류해봐야 할듯
+# - 오일러 서킷, 한붓 그리기
+# - 스패닝 트리
+# - 절단점 찾기, 다리 찾기
+#
 # BFS 는 여러 부분을 건드리는 것, queue, linkedlist 로 구현하는 것이 일반적
 # 순서가 보장되어야 하기 떄문...?
 #
@@ -21,3 +28,4 @@
 # LinkedList 로도 표현 가능
 
 https://kasterra.github.io/graphds1/
+https://velog.io/@kasterra/%ED%95%B5%EC%8B%AC-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EA%B7%B8%EB%9E%98%ED%94%84
