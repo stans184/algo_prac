@@ -21,14 +21,14 @@ print(result2)
 #   > r 개의 데이터를 뽑아서, 일렬로 나열하는 모든 경우(순열)을 계산
 #   > 원소를 중복해서 뽑는다
 from itertools import product
-result3 = list(product(data, repeat=2))
+result3 = list(product(data, repeat=3))
 print(result3)
 # [('a', 'a'), ('a', 'b'), ('a', 'c'), ('b', 'a'), ('b', 'b'), ('b', 'c'), ('c', 'a'), ('c', 'b'), ('c', 'c')]
 #
 #   > combination with replacement
 #   > 원소를 중복해서 조합
 from itertools import combinations_with_replacement
-result4 = list(combinations_with_replacement(data, 2))
+result4 = list(combinations_with_replacement(data, 3))
 print(result4)
 # [('a', 'a'), ('a', 'b'), ('a', 'c'), ('b', 'b'), ('b', 'c'), ('c', 'c')]
 
