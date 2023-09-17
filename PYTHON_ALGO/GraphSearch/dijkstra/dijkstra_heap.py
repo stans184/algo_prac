@@ -19,15 +19,17 @@ def dijkstraHeap(arr, start):
     distance[start] = 0
     # 모두 방문할때 까지, heap queue 가 다 빠질 때까지 반복
     while q:
-        # 거리비용, 현재 노드 값을 heap pop 으로 뽑아냅
+        # heap에는 방문해야할 모든 노드들이 들어가 있다
+        # heapq는 min heap 이므로, 자동으로 최소값으로 정렬된다
+        # 따라서, 방문하지 않은 노드들 중에서, 가장 거리가 가까운 노드가 나온다
         min_distance, current = heapq.heappop(q)
-        # 현재 노드가 처리된 적 있는 노드라면 무시
+        # 현재 노드가 처리된 적 있는 노드라면 무시해야 하는데, visited 변수를 만들어서 처리해도 되지만
         # 왜냐, 아직 처리가 안됐다면 distance[current] 는 매우 큰 수일테니
         if distance[current] < min_distance:
             continue
         # 현재 노드와 연결된 모든 노드들의 거리비용 확인
         for i in range(number):
-            # 현재 노드까지 오는 비용 + 새로운 곳으로 가기 위한 비용을 더하면
+            # 출발점에서 현재 노드까지 오는 비용 + 새로운 곳으로 가기 위한 비용을 더하면
             # 현재 노드를 거쳐서 새로운 곳으로 가기 위한 비용
             cost = min_distance + arr[current][i]
             # 만약 현재 노드를 거쳐서 가는 비용이 더 작다면
@@ -42,7 +44,7 @@ def dijkstraHeap(arr, start):
 # 데이터 출력
 # ==========================================
 # 임의의 큰 숫자를 설정
-inf = 10000000
+inf = 100000000i
 # graph, node > node 가중치가 표기되어 있음, 안닿으면 inf
 map = [
     [0,     2,      5,  1,      inf,    inf],
