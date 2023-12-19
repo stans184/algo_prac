@@ -15,8 +15,10 @@ def longest_palindrome(s:str) -> str:
     # 슬라이딩 윈도우 우측으로 이동
     result = ''
     for i in range(len(s)-1):
+        # expand(i, i+1) 과 expand(i, i+2) 로 나뉜 것은
+        # palindrome 단어가 짝수로 만들어질 수도 있고, 홀수로 만들어질 수도 있기 때문
         result = max(result, expand(i, i+1), expand(i, i+2), key=len)
     
     return result
 
-print(longest_palindrome("babadbadbfdfsfffffdfaadbadbadbad"))
+print(longest_palindrome("babadbadbfdfsdfsfsfffffdsdffaadbadbadbad"))
