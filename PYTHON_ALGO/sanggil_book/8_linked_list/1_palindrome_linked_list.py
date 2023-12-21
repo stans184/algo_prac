@@ -23,8 +23,7 @@ def isPalindrome1(head):
 
     return True
 
-# 2. 책 보고 참조
+# 2. 책 보고 참조, Runner를 활용한 기법
 def isPalindrome2(head):
     
 
-print(isPalindrome1(input2))
