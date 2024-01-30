@@ -1,17 +1,12 @@
-import heapq
+n = int(input())
+white_stones = []
+for i in range(n):
+    white_stones.append(list(map(int, input().split())))
 
-def solution(scoville, K):
-    
-    s = []
-    count = 0
-    
-    for food in scoville:
-        heapq.heappush(s, food)
-        
-    while min(s) < K:
-        heapq.heappush(s, heapq.heappop(s) + heapq.heappop(s)*2)
-        count += 1
-        
-    print(s, count)
-    return count
 
+
+for i in range(1, 20):
+    for j in range(1, 20):
+        if [i, j] in white_stones: print(1, end=" ")
+        else: print(0, end=" ")
+    print()
